@@ -8,8 +8,11 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
+      sh 'echo Checking the contents of ultCICD directory:'
+        sh 'ls -alR ultCICD'
+        
+        sh 'echo Current working directory:'
+        sh 'pwd'
       }
     }
     stage('Build and Test') {
