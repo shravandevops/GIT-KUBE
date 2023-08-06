@@ -18,7 +18,9 @@ pipeline {
     }
     stage('Build and Test') {
       steps {
-        sh 'ls -ltr'
+        sh 'echo Checking the contents of ultCICD directory before build:'
+        sh 'ls -alR'
+        sh 'echo Current working directory before build:'
         sh 'pwd'
         sh 'cd ultCICD/spring-boot-app && mvn clean package'
       }
