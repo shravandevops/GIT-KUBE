@@ -18,6 +18,7 @@ pipeline {
     stage('Build and Test') {
       steps {
         sh 'ls -ltr'
+        sh 'pwd'
         // build the project and create a JAR file
         sh 'cd ultCICD/spring-boot-app && mvn clean package'
       }
