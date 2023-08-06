@@ -21,9 +21,10 @@ stage('Build and Test') {
     sh 'ls -ltr' // List files in the workspace to check if 'ultCICD/spring-boot-app' exists
     sh 'pwd' // Print the current working directory to identify any issues
     sh 'env' // Print environment variables to verify workspace and Docker mount points
-    sh 'ls -ltr ultCICD/spring-boot-app' // List files in the 'ultCICD/spring-boot-app' directory
-    sh 'cd ultCICD/spring-boot-app && mvn clean package' // Attempt the build again
-  }
+  dir('ultCICD/spring-boot-app') {
+    sh 'mvn clean package'
+   }
+}
 }
      stage('Static Code Analysis') {
       environment {
