@@ -15,7 +15,7 @@ stage('Checkout') {
     }
   }
 }
-    stage('Build and Test') {
+stage('Build and Test') {
       steps {
         sh 'ls -ltr'
         sh 'pwd'
