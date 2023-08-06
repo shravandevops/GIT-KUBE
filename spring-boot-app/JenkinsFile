@@ -25,6 +25,7 @@ stage('Build and Test') {
                     sh 'sudo mvn clean package'
 }
 }
+}
      stage('Static Code Analysis') {
       environment {
         SONAR_URL = "http://13.211.153.80:9000"
