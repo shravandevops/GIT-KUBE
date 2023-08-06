@@ -22,7 +22,7 @@ stage('Build and Test') {
     sh 'pwd' // Print the current working directory to identify any issues
     sh 'env' // Print environment variables to verify workspace and Docker mount points
     dir('ultCICD/spring-boot-app') {
-                    sh 'sudo mvn clean package'
+                    sh 'mvn clean package'
 }
 }
 }
